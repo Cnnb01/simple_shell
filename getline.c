@@ -19,7 +19,7 @@ arg = tokenize_input(input);
 execute_command(arg);
 
 free(input);
-free(arg); 
+free(arg);
 arg = NULL;
 }
 freemem(arg);

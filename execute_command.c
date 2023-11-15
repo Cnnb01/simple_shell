@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 * execute_command - Executes the command from the tokenized input
-*
+*@input: The input string from the user
 *@arg: The tokenized input
 */
 void execute_command(char **arg, char *input)
