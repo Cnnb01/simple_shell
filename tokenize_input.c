@@ -25,7 +25,8 @@ for (j = 0; j < i; j++)
 free(arg[j]);
 }
 free(arg);
-return (NULL);
+perror("malloc error");
+exit(EXIT_FAILURE);
 }
 m_strcpy(arg[i], token);
 i++;

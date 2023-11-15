@@ -18,9 +18,9 @@ while (1)
 input = get_input();
 arg = tokenize_input(input);
 execute_command(arg);
-
+}
 freemem(arg);
 
-}
+
 return (0);
 }
