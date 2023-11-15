@@ -35,7 +35,7 @@ rebyte = getline(&input, &buf, stdin);
 if (rebyte == -1)
 {
 perror("getline error");
-free(input);
+/*free(input);*/
 exit(EXIT_FAILURE);
 }
 }

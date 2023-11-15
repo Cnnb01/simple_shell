@@ -34,7 +34,7 @@ token = strtok(NULL, " \n\t\r");
 }
 arg[i] = NULL;
 
-free(input);/*added*/
+/*free(input);added*/
 
 return (arg);
 }
