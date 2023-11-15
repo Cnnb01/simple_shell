@@ -4,7 +4,7 @@
 *
 *@arg: The tokenized input
 */
-void execute_command(char **arg)
+void execute_command(char **arg, char *input)
 {
 int interactive = 1;
 int arg_length = 0;
@@ -29,10 +29,8 @@ if (arg_length > 1 && interactive == 0)
 return;
 }
 execute(arg);
-
+free(input);/*added*/
 if (arg_length > 1)
 freemem(arg);
-
 /*free(arg);added*/
-
 }

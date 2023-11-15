@@ -12,29 +12,16 @@ char *get_input(void);
 char **tokenize_input(char *input);
 void execute_command(char **arg);
 void freemem(char **arg);
-
 while (1)
 {
 input = get_input();
-
-if (input == NULL)
-{
-break;
-}
-
 arg = tokenize_input(input);
-
-if (arg == NULL || arg[0] == NULL)
-{
-
-free(input);
-continue;
-}
-
 execute_command(arg);
-freemem(arg);
-free(input);
-}
 
+free(input);
+free(arg); 
+arg = NULL;
+}
+freemem(arg);
 return (0);
 }

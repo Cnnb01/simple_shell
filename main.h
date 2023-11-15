@@ -8,7 +8,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <errno.h>
-
+#define BUFSIZE 1024
 void freemem(char **arg);
 char *m_strcpy(char *dest, const char *src);
 int m_strcmp(const char *string1, const char *string2);

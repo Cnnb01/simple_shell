@@ -32,6 +32,6 @@ return (full_path);
 free(full_path);
 token = strtok(NULL, ":");
 }
-free(path_cpy);
+free(full_path);
 return (NULL);
 }

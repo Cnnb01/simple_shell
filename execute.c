@@ -25,8 +25,9 @@ cmd_path = find_command(arg[0]);
 if (cmd_path != NULL)
 {
 execve(cmd_path, arg, environ);
-perror("./mfine");
-free(cmd_path);
+perror("execve");
+/*free(cmd_path);*/
+exit(2);/*add*/
 }
 else
 {
@@ -34,6 +35,7 @@ perror("Command not found:");
 exit(2);
 }
 }
+/*free(cmd_path);*/
 }
 else if (mpid > 0)
 {
