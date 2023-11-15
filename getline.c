@@ -16,11 +16,25 @@ void freemem(char **arg);
 while (1)
 {
 input = get_input();
-arg = tokenize_input(input);
-execute_command(arg);
-}
-freemem(arg);
 
+if (input == NULL)
+{
+break;
+}
+
+arg = tokenize_input(input);
+
+if (arg == NULL || arg[0] == NULL)
+{
+
+free(input);
+continue;
+}
+
+execute_command(arg);
+freemem(arg);
+free(input);
+}
 
 return (0);
 }
